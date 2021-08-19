@@ -31,7 +31,7 @@ const App = (props) => {
   const addToFavorites = (movie) => {
     
   }
-
+ 
   return (
     <div>
       <nav className="navbar navbar-dark bg-dark">
