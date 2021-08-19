@@ -23,7 +23,7 @@ const App = (props) => {
       .catch(err => {
         console.log(err);
       });
-  }, []);
+  }, [movies]);
 
   const deleteMovie = (id)=> {
   }
