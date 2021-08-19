@@ -5,7 +5,7 @@ import MovieList from './components/MovieList';
 import Movie from './components/Movie';
 
 import MovieHeader from './components/MovieHeader';
-
+import AddMovieForm from './components/AddMovieForm';
 import EditMovieForm from './components/EditMovieForm';
 import FavoriteMovieList from './components/FavoriteMovieList';
 
@@ -24,7 +24,7 @@ const App = (props) => {
         console.log(err);
       });
   }, [movies]);
-
+// Do you need these functions if you set up the dependency array to trigger the effect hook when movies is changed?
   const deleteMovie = (id)=> {
   }
 
@@ -47,12 +47,16 @@ const App = (props) => {
             <Route path="/movies/edit/:id" render={props => <EditMovieForm {...props} />}>
             </Route>
 
-            <Route path="/movies/:id">
+            <Route exact path="/movies/:id">
               <Movie/>
             </Route>
 
             <Route path="/movies">
               <MovieList movies={movies}/>
+            </Route>
+
+            <Route path="/add">
+              <AddMovieForm/>
             </Route>
 
             <Route path="/">
