@@ -31,7 +31,7 @@ const Movie = (props) => {
         .catch(err=>{
             console.log(err);
         })
-    }
+    };
     
 
     return(<div className="modal-page col">
